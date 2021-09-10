@@ -1,9 +1,12 @@
 #!/bin/bash
 
-echo "========== yukleniyor  ================"
-./install.sh
+echo "========== adim bir yukleniyor  ================"
+./step1.sh
 
-echo "========== yuklendi ================"
+echo "========== adim bir yuklendi ================"
 
-echo "========== yuklendi ================"
-./swapfile.sh
+echo "========== adim iki yukleniyor ================"
+
+./step2.sh
+
+echo "========== adim iki yuklendi ================"
