@@ -1,1 +1,1 @@
-# Arch i3 otomatik kurulumum
+arch linux için i3wm otomatik kurulumu
