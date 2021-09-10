@@ -17,3 +17,6 @@ chown -R susu:susu /home/susu
 cat ./susu/sudoers >> /etc/sudoers
 
 chown susu:susu /opt
+
+git clone https://aur.archlinux.org/yay.git /home/susu/
+chown -R  susu:susu /home/susu/yay
