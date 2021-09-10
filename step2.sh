@@ -11,6 +11,13 @@ mkdir -p /home/susu/.config/i3
 cp ./susu/wallpaper/air.jpg /home/susu/wallpaper/air.jpg
 cp ./susu/.config/i3/config /home/susu/.config/i3/config
 cp ./susu/.profile /home/susu/.profile
+cp ./susu/resolv.conf /etc/resolv.conf
+chattr +i /etc/resolv.conf
+cp ./susu/pacman.conf /etc/pacman.conf
+pacman -Ssyyu
+pacman -Syu
+pacman -S wine
+
 chown -R susu:susu /home/susu
 
 cat ./susu/sudoers >> /etc/sudoers
