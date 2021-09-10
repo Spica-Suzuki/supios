@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacman -S sudo chromium nomacs gimp terminator feh discord nautilus i3-gaps i3blocks i3lock i3status dmenu zsh vlc
+pacman -S sudo alsa alsa-utils alsa-plugins pulseaudio chromium nomacs gimp terminator feh discord nautilus i3-gaps i3blocks i3lock i3status dmenu zsh vlc
 
 # add user
 useradd -m susu
