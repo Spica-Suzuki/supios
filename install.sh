@@ -20,3 +20,5 @@ chown susu:susu /opt
 
 git clone https://aur.archlinux.org/yay.git /home/susu/
 chown -R  susu:susu /home/susu/yay
+su susu
+makepkg -si /home/susu/yay
