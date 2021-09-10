@@ -1,6 +1,6 @@
 #!/bin/bash
 
-pacman -S sudo alsa alsa-utils alsa-plugins pulseaudio chromium nomacs gimp terminator feh discord nautilus i3-gaps i3blocks i3lock i3status dmenu zsh vlc flameshot
+pacman -S sudo alsa alsa-utils alsa-plugins pulseaudio chromium nomacs gimp terminator feh discord nautilus xorg xorg-xinit xorg-server alsamixer i3-gaps i3blocks i3lock i3status dmenu zsh vlc flameshot
 
 # add user
 useradd -m susu
@@ -23,3 +23,4 @@ chown -R  susu:susu /home/susu/yay
 su susu
 makepkg -si /home/susu/yay
 yay -S bumblebee-status
+echo "exec i3" >> /etc/X11/xinit/xinitrc
