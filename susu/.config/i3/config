@@ -1,19 +1,10 @@
-# Bu dosya  i3-config-wizard tarafından otomatik olarak oluşturulmuştur.
-# It will not be overwritten, so edit it as you like.
-#
-# Should you change your keyboard layout some time, delete
-# this file and re-run i3-config-wizard(1).
-#
-
-# i3 yapilandirma dosyasi (v4)
-#
-# Lutfen butun referanslar icin https://i3wm.org/docs/userguide.html adresini ziyaret edin!
+# Butun referanslar icin https://i3wm.org/docs/userguide.html
 
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:Ubuntu Mono 10
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -30,19 +21,14 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
 exec_always picom
 exec_always xcompmgr -c -f -n
-exec_always feh --bg-scale Downloads/air.jpg
-exec_always --no-startup-id volumeicon
+exec_always feh --bg-scale Downloads/best_wallpaper.png
+exec --no-startup-id volumeicon
 #exec_always --no-startup-id nm-applet
 #exec_always --no-startup-id blueman-applet
 exec_always setxkbmap tr
+#exec --no-startup-id nm-applet
+for_window [class="^.*"] border pixel 0
 
-for_window [class="^.*"] border pixel 1
-
-
-
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -160,7 +146,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Çıkış tuşuna bastın. Çıkmak istediğinden emin misin?' -B 'Evet, çık' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -193,15 +179,18 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         i3bar_command i3bar
-        position bottom status_command bumblebee-status -m time -t greyish-powerline
+        position bottom status_command bumblebee-status -m   time date -t supiline
     font pango:Ubuntu Mono 10
         colors {
-                background #0D0D0D
+                background #00>0000
                 statusline #FFFFFF
                 separator #FFFFFF
                 # colorclass       <border> <background> <text>
-                focused_workspace  #F0544C  #F0544C     #FFFFFF
-                inactive_workspace #121212  #121212     #FFFFFF
+                focused_workspace  #000000  #e4717a     #FFFFFF
+                inactive_workspace #000000  #000000     #e4717a
 
         }
 }
+
+
+
